@@ -7,7 +7,7 @@ const StyledLogo = styled.img`
     width:70px;
 `
 
-const Logo = () => {
+const Header = () => {
     return (
         <>
             <StyledLogo src={LogoImage} alt="splitter" />
@@ -15,4 +15,4 @@ const Logo = () => {
     )
 }
 
-export default Logo
+export default Header

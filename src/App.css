@@ -19,6 +19,7 @@
 html, body{
     overflow: hidden;
     font-family: 'Space Mono', monospace;
+    color: var(--very-dark-cyan);
     background-color: var(--light-grayish-cyan);
     height: 100%;
     width: 100%;
