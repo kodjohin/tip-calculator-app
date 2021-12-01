@@ -72,7 +72,7 @@ const StyledButtons = styled.div`
   margin-bottom: 20px;
 
   button {
-    padding: 15px 40px;
+    padding: 10px 40px;
     border-radius: 5px;
     font-size: 1.2rem;
     font-weight: 700;
@@ -95,7 +95,7 @@ const StyledButtons = styled.div`
     &[value="Custom"]
     {
         background-color: var(--very-light-grayish-cyan);
-        color: var(--very-dark-cyan);
+        color: var(--very-dark-grayish-cyan);
     }
   }
 `;
