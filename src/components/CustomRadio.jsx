@@ -63,15 +63,15 @@ const CustomRadio = (props) => {
 						id={props.id}
 						value={props.label}
 						name={props.name}
-						defaultChecked={props.label === "custom"}
+						defaultChecked={props.label === "Custom"}
 					/>
 					<label className="custom" htmlFor={props.id}></label>
 					<input
 						className="custom"
 						type="number"
-						value=""
+						value={props.custom}
 						placeholder="Custom"
-						onChange={(e) => props.onChange(e)}
+						onChange={(e) => props.onCustom(e)}
 					/>
 				</>
 			) : (

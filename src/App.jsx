@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Header from "./components/Header";
 import Person from "./images/icon-person.svg";
@@ -101,7 +101,7 @@ const StyledSection = styled.div`
 		background-color: var(--strong-cyan);
 		font-weight: 700;
 		font-family: "Space Mono", monospace;
-    cursor: pointer;
+		cursor: pointer;
 	}
 
 	label {
@@ -125,42 +125,49 @@ const App = () => {
 	const [bill, setBill] = useState("");
 	const [people, setPeople] = useState("");
 	const [tip, setTip] = useState("5%");
+	const [customTip, setCustomTip] = useState("");
 	const [tipAmount, setTipAmout] = useState(0);
 	const [total, setTotal] = useState(0);
 
 	const onBillChanged = (e) => {
-    console.log(e.target.value);
-    const value = e.target.value;
-    if(parseInt(value) === 0) return;
-    setBill(value);
-  };
+		console.log(e.target.value);
+		const value = e.target.value;
+		if (parseInt(value) === 0) return;
+		setBill(value);
+	};
 
-  const onTipChanged = (e) => {
-    console.log(e.target.value);
-    const value = e.target.value;
-    setTip(value);
-  };
-  const onCustomTipChanged = (e) => {
-    console.log(e.target.value);
-    const value = e.target.value;
-    setTip(value);
-  };
+	const onTipChanged = (e) => {
+		console.log(e.target.value);
+		const value = e.target.value;
+		setTip(value);
+	};
+	const onCustomTipChanged = (e) => {
+		console.log(e.target.value);
+		const value = e.target.value;
+		setCustomTip(value);
+	};
 
-  const onPeopleChanged = (e) => {
-    console.log(e.target.value);
-    const value = e.target.value;
-    if(parseInt(value) === 0) return;
-    setPeople(value);
-  };
+	const onPeopleChanged = (e) => {
+		console.log(e.target.value);
+		const value = e.target.value;
+		if (parseInt(value) === 0) return;
+		setPeople(value);
+	};
 
-  const reset = () => {
-    console.log("%c Call Reset", "font-size: 20px; color: red;");
-    setTip("5%");
-    setBill("");
-    setPeople("");
-    setTipAmout(0);
-    setTotal(0);
-  }
+	useEffect(() => {
+		if (!(bill && tip && people)) return;
+		setTipAmout(((bill * (parseInt(tip)/100))/people).toFixed(2));
+		setTotal(((bill * (1 + parseInt(tip)/100))/people).toFixed(2));
+	}, [bill, tip, people]);
+
+	const reset = () => {
+		console.log("%c Call Reset", "font-size: 20px; color: red;");
+		setTip("5%");
+		setBill("");
+		setPeople("");
+		setTipAmout(0);
+		setTotal(0);
+	};
 
 	return (
 		<StyledApp className="container">
@@ -177,7 +184,15 @@ const App = () => {
 					<label type="text">Select Tip %</label>
 					<StyledButtons>
 						{["5%", "10%", "15%", "25%", "50%", "custom"].map((tip, index) => (
-							<CustomRadio id={`tip${index}`} name="tip" label={tip} key={index}  onChange={(e) => onTipChanged(e)}/>
+							<CustomRadio
+								id={`tip${index}`}
+								name="tip"
+								label={tip}
+								key={index}
+								custom={customTip}
+								onChange={(e) => onTipChanged(e)}
+								onCustom={(e) => onCustomTipChanged(e)}
+							/>
 						))}
 					</StyledButtons>
 					<label type="text">Number of People</label>
@@ -206,6 +221,6 @@ const App = () => {
 			</StyledMain>
 		</StyledApp>
 	);
-}
+};
 
 export default App;
