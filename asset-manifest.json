@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/tip-calculator-app/static/css/main.a88244d9.chunk.css",
-    "main.js": "/tip-calculator-app/static/js/main.35cccef6.chunk.js",
-    "main.js.map": "/tip-calculator-app/static/js/main.35cccef6.chunk.js.map",
+    "main.css": "/tip-calculator-app/static/css/main.3b170aec.chunk.css",
+    "main.js": "/tip-calculator-app/static/js/main.4c37d6ce.chunk.js",
+    "main.js.map": "/tip-calculator-app/static/js/main.4c37d6ce.chunk.js.map",
     "runtime-main.js": "/tip-calculator-app/static/js/runtime-main.49744712.js",
     "runtime-main.js.map": "/tip-calculator-app/static/js/runtime-main.49744712.js.map",
     "static/js/2.5a0165b5.chunk.js": "/tip-calculator-app/static/js/2.5a0165b5.chunk.js",
     "static/js/2.5a0165b5.chunk.js.map": "/tip-calculator-app/static/js/2.5a0165b5.chunk.js.map",
     "index.html": "/tip-calculator-app/index.html",
-    "static/css/main.a88244d9.chunk.css.map": "/tip-calculator-app/static/css/main.a88244d9.chunk.css.map",
+    "static/css/main.3b170aec.chunk.css.map": "/tip-calculator-app/static/css/main.3b170aec.chunk.css.map",
     "static/js/2.5a0165b5.chunk.js.LICENSE.txt": "/tip-calculator-app/static/js/2.5a0165b5.chunk.js.LICENSE.txt",
     "static/media/icon-dollar.9f9be353.svg": "/tip-calculator-app/static/media/icon-dollar.9f9be353.svg",
     "static/media/icon-person.65bfd204.svg": "/tip-calculator-app/static/media/icon-person.65bfd204.svg",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.49744712.js",
     "static/js/2.5a0165b5.chunk.js",
-    "static/css/main.a88244d9.chunk.css",
-    "static/js/main.35cccef6.chunk.js"
+    "static/css/main.3b170aec.chunk.css",
+    "static/js/main.4c37d6ce.chunk.js"
   ]
 }
