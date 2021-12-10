@@ -21,8 +21,8 @@ html, body{
     font-family: 'Space Mono', monospace;
     color: var(--very-dark-cyan);
     background-color: var(--light-grayish-cyan);
-    height: 100%;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     display: grid;
     justify-content: center;
     align-items: center;

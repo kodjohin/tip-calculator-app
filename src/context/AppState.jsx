@@ -3,7 +3,6 @@ import { createContext, useState, useEffect } from "react";
 const initialeState = {
 	bill: "",
 	tip: 10,
-	customTip: "",
 	people: "",
 	tipAmount: Number(0).toFixed(2),
 	total: Number(0).toFixed(2),
@@ -17,36 +16,35 @@ export const AppProvider = ({ children }) => {
 	const [state, setState] = useState(initialeState);
 
 	const onBillChanged = (e) => {
-		console.log(e.target.value);
+		// console.log(e.target.value);
 		const value = e.target.value;
 		if (parseInt(value) === 0) return;
 		setState({ ...state, bill: value });
 	};
 
 	const onTipChanged = (e) => {
-		console.log(e.target.value);
+		// console.log(e.target.value);
 		const value = e.target.value;
 		setState({ ...state, tip: value });
 	};
 	const onCustomTipChanged = (e) => {
-		console.log(e.target.value);
+		// console.log(e.target.value);
 		const value = e.target.value;
-		setState({ ...state, customTip: value });
+		setState({ ...state, tip: value });
 	};
 
 	const onPeopleChanged = (e) => {
-		console.log(e.target.value);
+		// console.log(e.target.value);
 		const value = e.target.value;
 		if (parseInt(value) === 0) return;
 		setState({ ...state, people: value });
 	};
 
 	const reset = () => {
-		console.log("%c Call Reset", "font-size: 20px; color: red;");
+		// console.log("%c Call Reset", "font-size: 20px; color: red;");
 		setState({
 			bill: "",
 			tip: 10,
-			customTip: "",
 			people: "",
 			tipAmount: Number(0).toFixed(2),
 			total: Number(0).toFixed(2),
@@ -74,7 +72,6 @@ export const AppProvider = ({ children }) => {
 			value={{
 				bill: state.bill,
 				tip: state.tip,
-				customTip: state.customTip,
 				people: state.people,
 				tipAmount: state.tipAmount,
 				total: state.total,

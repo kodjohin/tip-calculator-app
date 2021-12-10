@@ -5,12 +5,10 @@ import Dollar from "../images/icon-dollar.svg";
 export const StyledBillCalc = styled.div`
 	display: flex;
 	flex-direction: column;
-
-	&>label {
-		margin: 10px 0;
-	}
-
-	input {
+	max-width: 300px;
+	gap: 10px;
+	
+	> input {
 		font-size: 1.5rem;
 		border-radius: 3px;
 		padding: 5px 0;
@@ -28,7 +26,7 @@ export const StyledBillCalc = styled.div`
 		&.bill {
 			background: url(${Dollar}) no-repeat scroll 7px 14px
 				var(--very-light-grayish-cyan);
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 		}
 
 		&.people-number {

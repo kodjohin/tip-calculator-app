@@ -3,17 +3,11 @@ import {StyledRadio} from "../components-styles/StyledRadio";
 
 const CustomRadio = (props) => {
 	return (
-		<StyledRadio onChange={(e) => props.onChange(e)}>
+		<StyledRadio >
 			{props.label === "custom" ? (
 				<>
 					<input
-						type="radio"
-						id={props.id}
-						value={props.label}
-						name={props.name}
-					/>
-					<label className="custom" htmlFor={props.id}></label>
-					<input
+						data-testid="custom"
 						className="custom"
 						type="number"
 						value={props.custom}
@@ -29,6 +23,8 @@ const CustomRadio = (props) => {
 						value={props.label}
 						name={props.name}
 						defaultChecked={props.checked}
+						data-testid={props.label}
+						onChange={(e) => props.onChange(e)}
 					/>
 					<label htmlFor={props.id}>{props.label}</label>
 				</>

@@ -6,8 +6,8 @@ import { SplitterContext } from "../context/AppState";
 const StyledButtons = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 15px;
-	margin-bottom: 20px;
+	gap: 10px;
+	margin-bottom: 10px;
 `;
 const TipList = () => {
     const {tip, customTip, onTipChanged, onCustomTipChanged} = useContext(SplitterContext)

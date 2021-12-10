@@ -8,7 +8,7 @@ const BillCalc = () => {
 	const { bill, people, onBillChanged, onPeopleChanged } = useContext(SplitterContext);
 	return (
 		<StyledBillCalc>
-			<label type="text">Bill</label>
+			<label data-testid="bill_label" type="text">Bill</label>
 			<input
 				className="bill"
 				type="number"

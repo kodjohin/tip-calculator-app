@@ -15,17 +15,35 @@ export const StyledRadio = styled.div`
 	}
 
 	input.custom {
-		width: 155px;
+		height:50px;
+		width: 145px;
+		border-radius: 3px;
 		display: block;
 		text-align: center;
-	}
-	label.custom {
-		display: none;
-	}
+		color: var(--very-dark-cyan);
+		font-size: 1.5rem;
+		font-weight: 700;
+		font-family: "Space Mono", monospace;
+		outline: var(--strong-cyan);
+		padding-right:10px;
 
-	input.custom {
 		:focus {
-			text-align: right;
+			border: 1px solid var(--strong-cyan);
+		}
+
+		/* Chrome, Safari, Edge, Opera */
+		::-webkit-outer-spin-button,
+		::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		/* Firefox */
+		[type="number"] {
+			-moz-appearance: textfield;
+		}
+		:focus {
+			// text-align: right;
 		}
 	}
 
